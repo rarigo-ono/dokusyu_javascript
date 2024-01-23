@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+</head>
+<body>
+    <script>
+        console.log('__________________________________');
+        //  5.16    switch文
+            //条件式に渡した値がcase節と一致した場合に、それ以降のコードを実行する
+            //どれにも一致しない場合は、default節に続くコードを実行する
+        const val = 0;
+        switch(val){
+            case "0":console.log("case文が実行されました。");
+            default: console.log("default文が実行されました。");
+        }
+        console.log('__________________________________');
+        const whichCase = "case1";
+
+        switch(whichCase){
+            case "case1":
+                console.log("case1 節を実行しました。");
+                //break;
+            case "case2":
+                console.log("case2 節を実行しました。");
+            break;
+            default:
+                console.log("Default 節を実行しました。")
+        }
+        console.log('__________________________________');
+        //練習問題  5.3
+        let animal = "アリクイ";
+
+        switch(animal){
+            case "ウサギ":
+                console.log("ウサギやん！");
+                break;
+            case "ウマ":
+                console.log("ウマやん！");
+                break;
+            case "ゾウ":
+                console.log("ゾウやん！");
+                break;
+            default:
+                console.log("未確認動物やで～");
+            }
+    </script>
+</body>
+</html>

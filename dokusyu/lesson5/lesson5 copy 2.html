@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+</head>
+<body>
+    <script>
+        console.log('__________________________________');
+        //5.3   基本的な繰り返し処理
+            //5.3.1   while文
+        let i = 0;
+        while(i < 5){
+            console.log(i);
+            i++;
+        }
+        //繰り返し処理には、iやj、kといったアルファベット1文字が良く使われる
+        console.log('__________________________________');
+        //練習問題
+        let j = 0;
+        while(j < 7){
+            console.log(j);
+            j += 2;
+        }
+
+        console.log('__________________________________');
+        //5.3.2 for文
+        //「初期化処理」「ループ継続のための条件式」「ループごとに実行される式」をセミコロン(;)で区切る
+        for (let i = 0; i < 5; i++){
+            console.log(i);
+        }
+        console.log('__________________________________');
+        //練習問題
+        for (let i = 0; i < 10; i += 3){
+            console.log(i);
+        }
+
+        console.log('__________________________________');
+        //5.3.3 配列とfor文
+        const fruitArray = [
+            "りんご", "メロン", "みかん"
+        ];
+
+        console.log(fruitArray[0]);
+        console.log(fruitArray[1]);
+        fruitArray[0] = "バナナ";
+        console.log(fruitArray[0]);
+
+        console.log('__________________________________');
+        const numArray = [1,2,3,4,5,6,7];
+        console.log(numArray.length)
+
+        console.log('__________________________________');
+        const numArray2 = [10, 20, 30];
+
+        for(let index = 0; index < numArray2.length; index++){
+            numArray2[index] = numArray2[index] + 10;
+        }
+        
+        console.log(numArray2);
+
+        console.log("__________________________________");
+
+        //練習問題
+        const arry = [10, 20, 23, 47];
+        sum = 0;
+
+        for (let index = 0; index < arry.length; index++){
+            sum += arry[index]
+        }
+        console.log(sum);
+        //console.log(answer);
+    </script>
+</body>
+</html>

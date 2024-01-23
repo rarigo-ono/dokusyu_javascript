@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+</head>
+<body>
+    <script>
+        console.log('__________________________________');
+        //5.3.4 for...in文
+        //  オブジェクトの要素に対して繰り返し処理を行うときに使う
+        /*
+        for(const key in obj){
+            オブジェクトの各プロパティに対する繰り返し処理
+        }
+        key     オブジェクトのプロパティが１つずつ渡される
+        obj     オブジェクトの配列を設定できる
+        */
+
+        const fruits = {apple: "りんご", banana: "バナナ", orange: "オレンジ"};
+        
+        for(const key in fruits){
+            console.log(`キー[${key}] 値:[${fruits[key]}]`);
+        };
+    </script>
+</body>
+</html>

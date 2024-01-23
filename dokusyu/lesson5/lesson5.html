@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+</head>
+<body>
+    <script>
+        const num = 5;
+        if(num >= 0 && num < 10){
+            console.log("0以上10未満です。")
+        } else {
+            console.log("それ以外です。")
+        }
+
+        const falsyVal = 0;
+        if(falsyVal !== null && falsyVal !== undefined){
+            console.log("null、undefined以外の値です。");
+        } else {
+            console.log("null、またはundefinedです。")
+        }
+
+        console.log('__________________________________');
+
+        //練習問題
+        let val = "1";
+        if (val){
+            console.log("Good Bye")
+        }else{
+            console.log("Hello");
+        }
+
+        console.log('__________________________________');
+        let value = 1;
+        if (value === null || value === undefined){
+            console.log("Hello");
+        }
+
+        console.log('__________________________________');
+        //  5.16    swich文
+            //条件式に渡した値がcase節と一致した場合に、それ以降のコードを実行する
+            //どれにも一致しない場合は、default節に続くコードを実行する
+        
+
+    </script>
+</body>
+</html>
