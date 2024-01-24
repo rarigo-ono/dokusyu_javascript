@@ -18,6 +18,42 @@
         //関数実行
         let result = sum(10, 20);
         console.log(result)
+        console.log("練習問題6.1");
+        //関数の宣言
+        function multiply(val1, val2){
+            return val1 * val2;
+        }
+        //関数の実行
+        console.log(multiply(7,9));
+        console.log(multiply(-11, 9));
+
+        console.log("__________________________");
+        console.log("6.1.2引数と戻り値");
+        let externalVal = 3;
+        
+        //関数の宣言        
+        function add5(internalVal){ //引数internalValはこの関数内で有効
+            return internalVal + 5;
+        }
+
+        const result2 = add5(externalVal);//実引数に変数を設定
+
+        console.log(result2);
+
+        //console.log(internalVal);
+
+        console.log("__________________________");
+        console.log("練習問題　6.2");
+        function noArgmentFunc(){
+           return "引数のない関数です。";
+        }
+        console.log(noArgmentFunc())
+        
+
+
+
+
+
         </script>
 </body>
 </html>
