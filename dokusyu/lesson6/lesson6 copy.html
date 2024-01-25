@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6</title>
+</head>
+<body>
+    <script>
+        //6.2
+        //6.2.1     デフォルト引数
+        function plus(a, b = 5){
+            return a + b;
+        }
+
+        console.log(plus(1));       //引数が1つ
+        console.log(plus(1, 10));   //引数が2つ
+        
+        //設定されるのは、仮引数に渡ってきた値がunderfinedの場合だけ
+        function hello(greeting = "こんにちは、", person = "独習太郎"){
+            console.log(greeting + person);
+        }
+
+        hello(undefined, undefined)     //引数にundefinedを渡した場合
+        hello(null, null);              //nullを渡した場合
+        hello();                        //省略した場合
+
+        //6.5    練習問題
+        console.log("_____________________________");
+
+        //[1]
+        //  calcAreaOfCirle関数を設定
+        function calcAreaOfCirle(radius, pi = 3){//  第1引数 半径(radius)第2引数 円周率(pi ※デフォルト引数「3」に設定) 
+            //  円の面積を返す　radius * radius * pi
+            console.log(pi * radius * radius);
+        }
+
+        calcAreaOfCirle(5);
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6</title>
+</head>
+<body>
+    <script>
+        //6.3    コールバック関数
+        //他の関数に引数として返す関数
+        //6.3.1
+        console.log("_____________________________");
+        function fn(){};    //空の関数を定義
+
+        fn.fullname = "独習花子";   //オブジェクトのようにプロパティの追加ができる
+
+        fn.hello = function(){      //メソッド追加も可能
+            console.log("こんにちは、独習花子");
+        };
+
+        console.log(fn.fullname);   //プロパティの取得
+        fn.hello()                  //メソッドの実行
+        
+        //6.3.3
+        //setTimeout関数は、第1引数で渡したコールバック関数を特定の秒数だけ待ってから実行する関数
+        /*
+        function hello(){
+            console.log("こんにちは");
+        }
+
+        setTimeout(hello, 3000);
+        */
+        //練習問題  6.8
+        /*
+        function hello(){
+            console.log("こんにちは");
+        };
+
+        setTimeout(hello, 5000);
+        */
+        //6.3.4
+        console.log("___________________6.3.4");
+        function hello(name){
+            console.log("こんにちは、" + name);
+        }
+
+        setTimeout(hello, 3000, "独習太郎");
+
+        //練習問題  6.9
+        function plus(a, b){
+            return a + b;
+        }
+        function minus(a, b){
+            return a - b;
+        }
+
+        function calc(val1, val2, callback){
+           const result = callback(val1, val2);
+           console.log(result);
+        }
+
+        calc(1,2,plus);
+
+        //6.3.5 無名関数を使ったコールバック関数
+        console.log("______________________6.3.5");
+        //  function ([arg1], [arg2]...){....};
+        /*
+        setTimeout(function(){
+            console.log("こんにちは");
+        }, 3000);
+     */
+        //6.10
+        console.log("______________________6.10");
+        setTimeout(function(){
+            console.log("こんにちは");
+        }, 3000);
+
+        const hello2 = function(){
+            console.log("こんにちは");
+        };
+
+        console.log(hello2.toString());
+    </script>
+</body>
+</html>
