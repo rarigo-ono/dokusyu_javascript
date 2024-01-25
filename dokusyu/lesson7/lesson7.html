@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7</title>
+</head>
+<body>
+    <script>
+        //7  スコープ
+        //7.1   定義
+        //実行中のコードから参照できる、変数や関数の範囲
+        //関数内で宣言された変数は、その関数のスコープに属する
+        console.log("____________________");
+        function fnScopeA(){
+            let valA = 100;
+        }
+        
+        function fnScopeB(){
+            console.log(valA);
+        }
+
+        //7.2   特徴
+        //7.2.1 関数スコープ
+        //関数スコープは、異なる関数スコープに配置された変数や関数を使えない
+        function fnA(){
+            /*fnAスコープ開始*/
+            let valA = "fnA内の値";
+            const subA = () => {
+                console.log("fnA内の関数")
+            };
+
+            console.log(valA);
+            subA();
+            /*fnAスコープ終了*/
+        };
+
+        fnA();
+
+        function fnB(){
+            console.log(valA);
+            subA();
+        }
+
+        //fnB();  //fnAのスコープ外なのでエラー発生
+
+        //console.log(valA);
+        //subA();
+
+        console.log("____________________");
+        //7.2.2 ブロックスコープ
+        //letやconstキーワードを使って宣言された変数や関数を属するスコープ
+        if(true){
+            let letVal = "letで宣言";
+            const constFn = function(){
+                console.log("constで宣言");
+            };
+            var varVal = "varで宣言";
+            function fnStmt(){
+                console.log("関数宣言");
+            };
+        }
+
+        if(true){
+            //console.log(letVal);
+            //constFn();
+            console.log(varVal);
+            fnStmt();
+        }
+
+        
+
+
+
+        console.log("____________________");
+        console.log("____________________");
+        console.log("____________________");
+        console.log("____________________");
+        console.log("____________________");
+
+    </script>
+</body>
+</html>
