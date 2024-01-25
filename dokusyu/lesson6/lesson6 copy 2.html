@@ -81,6 +81,26 @@
         };
 
         console.log(hello2.toString());
+
+        //6.4   アロー関数
+        setTimeout(function(){
+            console.log("こんにちは");
+        },1000);
+
+        setTimeout(() => console.log("こんにちは"), 1000);
+        //6.4.1   記法
+        //6.11    練習問題
+        //1
+        const hello1 = (() => console.log("練習問題1　こんにちは"));
+        hello1();
+        //2
+        const double = (num => {return num * 2;});
+        console.log("練習問題2",double(10));
+
+        //3
+        setTimeout(name => console.log("練習問題3 こんにちは" + name), 3000, "独習太郎");
+
+
     </script>
 </body>
 </html>
