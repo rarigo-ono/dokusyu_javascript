@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8</title>
+</head>
+<body>
+    <script>
+        //8 thisキーワード
+        //8.1   実行コンテキスト
+        //コードが実行される前に、JavaScriptエンジンによって準備されるコードの実行環境のこと
+        //コード実行前に必ず実行コンテキストが生成され、どのような状態でコードが実行されているのかという情報が実行コンテキストごとに保持される
+        //生成されるタイミング
+        //①HTMLのScriptタグの直下やJavaScriptファイルの直下に記述されたコードが実行される直前
+        //②関数実行の直前
+        //①はグローバルコンテキスト
+        //②は関数コンテキスト
+        //実行コンテキストが変わるとthisの参照先の値も変わる
+        //8.1.1グローバルコンテキスト
+        console.log('___________________________________');
+        window.console.log("こんにちは");
+        console.log("さようなら");
+
+        function fn(){
+            console.log("はい、さようなら");
+        };
+
+        fn();
+        console.log('___________________________________');
+        /*トップレベルで実行した場合のWindowオブジェクトを参照する*/
+        console.log(this === window);
+
+
+        //8.1.2 関数コンテキスト
+        console.log('___________________________________');
+        //8.1.3 コールスタック
+        /*
+        console.log('___________________________________');
+        function first(){
+            let firstVal = "firstコンテキスト";
+            second();
+        };
+
+        function second(){
+            let secondVal = "secondコンテキスト";
+            debugger;
+        }
+
+        first();
+        */
+
+        //8.2関数コンテキストのthisの挙動
+        //8.2.2
+        const taro = {
+            name: "太郎", 
+            hello: function(){
+                console.log("こんにちは", this.name)
+            }
+        }
+
+        taro.hello();
+
+        //8.2.3 関数として実行した場合
+        window.name = "花子";
+
+        function hello(){
+            console.log("こんにちは、" + this.name);
+        }
+
+        hello();
+
+        //8.1   練習問題
+        window.name = "花子";
+
+        function hello(){
+            console.log("こんにちは、" + this.name);
+        }
+
+        const takuya = {
+            name: "拓哉",
+            hello: hello,
+        }
+
+        hello();
+        takuya.hello();
+    </script>
+</body>
+</html>

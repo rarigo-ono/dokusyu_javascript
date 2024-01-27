@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9</title>
+</head>
+<body>
+    <script>
+        //9.2
+        /*
+        クラスに関わる実装
+            静的メソッドと動的メソッド
+            ゲッターとセッター
+            クラス継承
+            生成元クラスの確認
+            hasOwnPropertyメソッドとin演算子        
+        */
+       //9.2.1
+    class Human{
+        static TYPE = "普通の人";   //静的プロパティ
+        static staticMove(){
+            console.log(Human.TYPE + "は歩いて移動します。");
+        }   //静的メソッド
+
+        constructor(name){
+            this.name = name;
+        };
+
+        move(){
+            console.log(this.name + "は歩いて移動します。");
+        }
+    }   
+    const taro = new Human("太郎");
+    Human.staticMove();
+    console.log(Human.TYPE);
+    taro.move()
+
+
+    //9.2.2
+
+    </script>
+</body>
+</html>

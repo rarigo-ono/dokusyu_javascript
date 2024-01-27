@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9</title>
+</head>
+<body>
+    <script>
+        //9.1
+        //9.1.1
+
+        //クラス定義
+        /*
+        class User{
+            constructor( username, password){
+                this.username = username;
+                this.password = password
+            };
+        login(){
+            console.log(`ログイン[${this.username} / ${this.password}];`);
+            };
+        }
+        */
+
+
+        //インスタンス化
+        /*
+        const taro = new User("独習太郎", "taro-pwd");
+        const hanako = new User("独習花子", "hanako-pwd");
+
+        taro.login();
+
+        console.log("_______________________");
+        class TestCls{
+            constructor(arg){
+                this.prop = arg;
+            }
+        }
+
+        const obj = new TestCls("引数");
+        console.log(obj.prop);
+
+        obj.prop = "値の変更";
+
+        console.log(obj.prop);
+        */
+
+        //9.1.4
+        class TestCls{
+            method(arg){
+                console.log(`引数:${arg}でメソッドを実行`);
+            }
+        }
+
+        const test = new TestCls;
+        test.method("テスト");
+        /*
+        class User{
+            constructor(username, password){
+                //インスタンスにプロパティを設定
+                this.username = username;
+                this.password = password;
+            }
+
+            login(){
+                console.log(`ログイン[${this.username} / ${this.password}]`);//プロパティを取得
+            }
+
+            changePassword(pwd){
+                this.password = pwd;    //プロパティのpasswordを変更
+                console.log(`パスワードが[${this.password}]に変更されました。`);
+            }
+        }
+
+        //インスタンス化
+        const taro = new User("独習太郎", "taro-pwd");
+
+        taro.login();
+
+        taro.changePassword("new-pwd");
+
+        taro.login();
+        */
+
+        class User{
+            constructor(username, password, roll){
+                this.username = username;
+                this.password = password;
+                this.roll = roll;
+            };
+
+            login(){
+                this.check();
+                this.checkRoll();
+                console.log(`ログイン[${this.username} / ${this.password}]`)
+            }
+
+            check(){
+                console.log(`ログイン情報を確認します。`)
+            }
+
+            checkRoll(){
+                if(this.roll === "admin"){
+                    console.log("管理者権限です。");
+                } else {
+                    console.log("一般ユーザーです。");
+                }
+            }
+        }
+        
+        //複数インスタンスで同じメソッドを呼び出した場合
+        const takuya = new User("独習拓哉", "takuya-pwd","admin");
+        takuya.login();
+
+        const shizuka = new User("独習静香", "shizuka-pwd");
+        shizuka.login();
+
+    </script>
+</body>
+</html>
