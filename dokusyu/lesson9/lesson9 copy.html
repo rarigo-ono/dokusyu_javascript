@@ -38,7 +38,60 @@
 
 
     //9.2.2
+    //静的メソッドから他の静的メソッドや静的プロパティは、クラス名を使って参照できる。
+    //静的メソッドからインスタンスメソッドやプロパティは参照不可
+    //インスタンスメソッドから他の静的メソッドや静的プロパティは、クラス名またはthis.constructorを使って参照できる。
+    //インスタンスメソッドから他のインスタンスやプロパティは、thisを通して参照できる。
 
+    //9.2
+    class StdClass{
+        constructor(arg){
+            this.arg = arg;
+        }
+
+        static printFn = console.log;
+
+        static print(arg) {
+            StdClass.printFn(arg);
+        };
+
+        print(){
+            this.constructor.print(this.arg);
+        }
+    }
+
+    const std = new StdClass("こんにちは");
+    std.print();
+
+    //9.2.3 ゲッターとセッター
+    class Person{
+        constructor(firstname, lastname){
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+
+        get fullname(){
+            return this.lastname + this.firstname;
+        }
+
+        set age(value){
+            this._age = Number(value);
+        }
+
+        get age(){
+            return this._age;
+        }
+    }
+
+    const taro2 = new Person("太郎", "独習");
+
+    console.log(taro2.fullname);
+
+    taro.age = "18";
+
+    console.log(typeof taro.age);
+
+    console.log(taro);
     </script>
 </body>
 </html>

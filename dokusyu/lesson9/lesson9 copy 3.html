@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9</title>
+</head>
+<body>
+    <script>
+    //9.3 練習問題
+    class Person{
+        constructor(value){
+            this.value = value;
+        };
+
+        get fullname(){
+            return this.lastname + this.firstname;
+        };
+
+        set age(value){
+            this._age = Number(value);
+        };
+
+        get age(){
+            return this._age;
+        };
+
+        set gender(value){
+            if(value === "男" || value === "女" || value === "トランスジェンダー"){
+                this._gender = value;
+            } else {
+                throw new Error('genderプロパティには"男"、"女"、または"トランスジェンダー"を設定してください。')
+            };
+        };
+
+        get gender(){
+            return this._gender;
+        }
+    };
+
+    const taro2 = new Person("太郎", "独習");
+    taro2.gender = "男";
+    console.log(taro2.gender)
+    taro2.gender = "不明";
+
+    //console.log(taro2.fullname);
+
+    //taro2.age = "18";
+
+    //console.log(typeof taro2.age);
+
+    //console.log(taro2);
+    </script>
+</body>
+</html>

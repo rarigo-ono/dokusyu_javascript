@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9</title>
+</head>
+<body>
+    <script>
+    //9.2.3 ゲッターとセッター
+    class Person{
+        constructor(firstname, lastname){
+            this.firstname = firstname;
+            this.lastname = lastname;
+        };
+
+        get fullname(){
+            return this.lastname + this.firstname;
+        };
+
+        set age(value){
+            this._age = Number(value);
+        };
+
+        get age(){
+            return this._age;
+        };
+    };
+
+    const taro2 = new Person("太郎", "独習");
+
+    console.log(taro2.fullname);
+
+    taro2.age = "18";
+
+    console.log(typeof taro2.age);
+
+    console.log(taro2);
+    </script>
+</body>
+</html>
