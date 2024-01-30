@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9</title>
+</head>
+<body>
+    <script>
+        //9.2.5 生成元のクラスの確認
+        //instaceof演算子を使う。
+        //構文
+        /*
+        let result = インスタンス　instanceof クラス名;
+        */
+       class Parent{ }
+       class Child extends Parent{ }
+
+       const obj = new Child;
+       console.log(obj instanceof Child);
+       console.log(obj instanceof Parent);
+       console.log(obj instanceof Object);
+       /*
+        明示的に継承元クラスを記述しない場合は、自動的にObjectクラスを継承する。
+        一部例外を除き、Objectクラスのメソッドが使える
+       */
+        
+       class Person{
+        constructor(){
+            this.name = "独習太郎";
+        };
+       };
+
+       const taro = new Person;
+       console.log(taro);
+       console.log(taro.hasOwnProperty("name"));
+    </script>
+</body>
+</html>

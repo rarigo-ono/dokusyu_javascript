@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10</title>
+</head>
+<body>
+    <script>
+        //組み込みオブジェクトとはあらかじめ提供されているオブジェクト郡
+        //そのまま使えるものもあれば、コンストラクタを呼び出して個別にインスタンス化をして、
+        //使うものもある。
+        //10.1  Windowオブジェクト
+        window.setTimeout(() => {
+            console.log("こんにちは。")
+        }, 1000);
+
+        //setIntervalを使っ処理
+        //指定した時間ごとに関数を実行できる。
+        //繰り返しを終了する場合clearIntervalを使う。
+        let counter = 0;
+        const interValID = setInterval(()=>{
+            counter++;
+            console.log(counter);
+    
+        if(counter === 3){
+            clearInterval(interValID);
+            console.log("インターバル終了")
+        };
+    },1000);
+
+        //confirm
+        //ここまではalertを使って表示していたが、confirmを使うとユーザー確認を促すダイアログを表示できる。
+        /*
+        if(confirm("画面を閉じますか？")){
+            window.close();
+        }
+        */
+    </script>
+</body>
+</html>

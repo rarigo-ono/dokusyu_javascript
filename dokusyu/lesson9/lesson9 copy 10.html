@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson9</title>
+</head>
+<body>
+    <script>
+        //9.3   ES2022でのクラス記法
+        //9.3.1 コンストラクタの省略
+        /*
+        クラスのトップレベルでプロパティを宣言できるようになりました。
+        */
+
+        //ES2015の場合
+        class ES2015{
+            constructor(){
+                this.prop = 0;
+            };
+        };
+        //ES2022の場合
+        /*class ES2022{
+            prop = 0;
+        }*/
+
+        class ES2022{
+            prop1 = 0;
+
+            constructor(arg){
+                this.prop2 = arg;
+            };
+        };
+
+    </script>
+</body>
+</html>

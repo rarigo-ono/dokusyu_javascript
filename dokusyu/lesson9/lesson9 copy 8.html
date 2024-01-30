@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9</title>
+</head>
+<body>
+    <script>
+        /*
+        9.2.6　hasOwnPropertyメソッドとin演算子
+        hasOwnPropertyは自身のオブジェクトにプロパティが存在するか確認するメソッド
+        同じような機能を持つin演算子もあります。
+
+        構文
+        let 真偽値 = オブジェクト.hasOwnProperty("プロパティ名");
+
+        let 真偽値 = "プロパティ名" in オブジェクト
+
+        使い分けとしては、
+        hasOwnProperty  プロパティのみを確認する場合
+        in演算子　プロパティ、メソッドまで確認する場合
+        */
+        class Person{
+            constructor(){
+                this.name = "独習太郎";
+            }
+            hello(){
+                console.log("こんにちは");
+            };
+        };
+
+        const taro = new Person;
+
+        console.log(taro.hasOwnProperty("name"));
+
+        console.log("name" in taro);
+
+        console.log(taro.hasOwnProperty("hello"));
+
+        console.log("hello" in taro);
+
+
+
+    </script>
+</body>
+</html>
