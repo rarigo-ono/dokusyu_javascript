@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10</title>
+</head>
+<body>
+    <script>
+        
+        //10.2
+        //10.2.5 日付の計算
+        //日時XのY日後の日付を取得
+        //指定日付の2日後の日付を取得
+        /*
+        const now = new Date(2021, 0, 31);
+        const twoDaysLater = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 2);
+        console.log(twoDaysLater.toDateString());
+        */
+       
+        //当月の月初、月末の取得
+        const date = new Date();
+        const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+        console.log(firstDay.toDateString());
+
+    </script>
+</body>
+</html>

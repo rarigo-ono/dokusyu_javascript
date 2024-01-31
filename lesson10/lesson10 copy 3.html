@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10</title>
+</head>
+<body>
+    <script>
+        
+        //10.4 Storageオブジェクト
+        /*
+        Web Storage API はブラウザ内にデータを保持できる。
+        変数などに格納されている値などは、ブラウザを閉じると消えてしまうが、
+        Storageオブジェクトを通してデータ保存すると、ブラウザ画面を再度開いた
+        ときにデータ復元ができる。
+        */
+        //10.4.1
+        /*
+        ローカルストレージやセッションストレージから使用する
+        コンストラクタ....オブジェクトを生成するもの
+        オブジェクト....コンストラクタから生成されたもの
+        */
+       //10.4.2
+       //10.4.3
+       //ローカルストレージに保存
+       //localStorage.setItem("lemon", "レモン");
+
+       sessionStorage.setItem("favoriteFruit", "リンゴ");
+       sessionStorage.setItem("favoriteFruit", "バナナ");
+
+       console.log(sessionStorage.getItem("favariteFruit"))
+       console.log(sessionStorage.getItem("favariteFruit"))
+
+    </script>
+</body>
+</html>
