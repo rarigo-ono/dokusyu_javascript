@@ -11,8 +11,29 @@
         //10.5　JSONオブジェクト
         //10.5.1
         //10.5.2
-        const target = {a: 0, b: 1, c: {d: 2, e: 0, f: "hello"}};
-        console.log(JSON.stringify(target));
+        const target = {a: 0, b: 1, c: {d: 2, e: 0, f: "hello"}};//変換対象のオブジェクト
+        console.log(JSON.stringify(target));//JSONに変換
+
+        console.log(JSON.stringify(target, ["a", "b"]));//aまたはｂを含むものを変換
+
+        console.log(JSON.stringify(target, ["e", "f"]));//第2層以降は配列による指定は不可
+
+
+        //値が1未満のものをJSONに含まない
+        function replacer(prop, value){
+            //値が数値型かつ1未満のとき
+            if(typeof value === "number" && value < 1){
+                return; //値を返さない
+            };
+            return value;
+        };
+
+        console.log(JSON.stringify(target, replacer)); //１未満の"a":0が変換されない
+
+
+        //タブでインデントを挿入
+        console.log(JSON.stringify(target, null, "\t"));
+        
 
     </script>
 </body>

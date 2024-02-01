@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10</title>
+</head>
+<body>
+    <script>
+        //10.6ラッパーオブジェクト
+        //ラッパーオブジェクトとは、プリミティブ値を包み込むオブジェクト
+        //プリミティブ値は単なる値のため、オブジェクトのようにメソッドなどは保持していない。
+        console.log("hello".toUpperCase());
+        console.log("hello".length);
+
+        const str = new String("hello");
+        console.log(str.toUpperCase());
+    </script>
+</body>
+</html>

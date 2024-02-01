@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10</title>
+</head>
+<body>
+    <script>
+        
+        //10.5　JSONオブジェクト
+        //10.5.3
+        /*
+        JSON.parseにJSON文字列を返すと、JavaScriptのデータに変換される
+        構文
+            JSON.parse(jsonStr);
+        */
+       const json = '{"b":1, "c":{"d":2, "f":"hello"}}'; //JSON文字列
+       const obj = JSON.parse(json);
+       console.log(obj.b);
+       console.log(obj.c);
+
+       //画面更新ごとに１ずつ加算する処理
+       let data = localStorage.getItem("data");
+       data = JSON.parse(data);
+
+       if(data === null){
+        data = { val: 0};
+       }
+
+       console.log(data.val);
+
+       data.val++;
+
+       const json2 = JSON.stringify(data);
+       localStorage.setItem("data", json);
+
+    </script>
+</body>
+</html>
