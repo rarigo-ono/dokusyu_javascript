@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11</title>
+</head>
+<body>
+    <script>
+        //11.1  配列(Array)
+        //11.1.2
+        const fruits = ["banana", "orange", "grape"];
+        console.log(fruits);
+        console.log(fruits[0]);
+
+        fruits[1] = "apple";  //配列の要素を取得
+        console.log(fruits);
+
+        console.log(fruits.length); //配列の長さを取得
+
+        console.log(fruits[fruits.length -1]);//配列の最後の要素を取得
+
+        //配列が多階層で構成されている場合
+        const array2D = [
+            ["太郎１", "25歳", "男"],
+            {name: "花子", age: "23歳", gender:"女"}
+        ];
+
+        console.log(array2D[0]);
+        console.log(array2D[0][0]);
+        console.log(array2D[0][2]);
+        console.log(array2D[1].name);
+        console.log(array2D[1]["age"]);
+
+
+
+
+        
+    </script>
+</body>
+</html>
