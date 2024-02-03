@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11</title>
+</head>
+<body>
+    <script>
+        //11.1  配列(Array)
+        //特定の要素を抽出した新しい配列の作成
+        const fruits =  ["banana", "orange", "grape"];
+        const newFruits = fruits.slice(1, 2);
+        console.log(newFruits);
+
+        console.log(fruits);
+
+        const toEndFruits = fruits.slice(1);
+        console.log(toEndFruits);
+        const allFruits = fruits.slice();
+        console.log(allFruits);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11</title>
+</head>
+<body>
+    <script>
+        //11.1  配列(Array)
+        //11.1.3    配列のメソッド
+        //配列に要素追加
+        //構文・・・配列.push(追加したい要素1[,追加したい要素2,・・・]);
+        /*
+        const fruits = ["banana", "orange", "grape"];
+        fruits.push("apple");
+        console.log(fruits);
+        */
+
+        /*
+        先頭に追加
+        構文
+        配列.unshift(追加したい要素1[,追加したい要素2, ....]);
+        */
+       const fruits =  ["banana", "orange", "grape"];
+       fruits.unshift("lemon");
+       console.log(fruits);
+
+        /*
+        先頭の要素削除
+        構文
+        let 削除した要素 = 配列.shift();
+        */
+
+        let returnVal = fruits.shift();
+        console.log(fruits);
+        console.log(returnVal);
+
+        /*
+        末尾の要素を削除
+        構文
+        let 削除した要素 = 配列.pop();
+        */
+        const fruits2 =  ["banana", "orange", "grape"];
+        let returnVal2 = fruits.pop();
+        console.log(fruits);
+
+        console.log(returnVal2);
+
+        /*
+        要素の切り取り
+        構文
+        let 切り取られた配列 = 元の配列.splice(開始位置, 長さ, [, 要素追加1, 要素追加2,　・・・・]);
+        */
+
+        const fruits3 =  ["banana", "orange", "grape"];
+        let deletedVal = fruits.splice(1, 2);
+        console.log(fruits3);
+        console.log(deletedVal);
+    </script>
+</body>
+</html>

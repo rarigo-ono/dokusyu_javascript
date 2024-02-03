@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11</title>
+</head>
+<body>
+    <script>
+        //11.1  配列(Array)
+        //要素結合して文字列作成
+        const arry = ["Hello", "World"];
+        console.log(arry.join(" "));
+
+        //要素を特定の値で埋める
+        const arry1 = [ ];
+        for(let i = 0; i < 100; i++){
+            arry1.push(0);
+        }
+        console.log(arry1);
+
+        const arry2 = new Array(100);
+        arry2.fill(0);
+        console.log(arry2);
+
+
+        //多次元配列の平坦化
+        const arry3D = [
+            1, [2], 3, [4, [5]]
+        ];
+        const arry2D = arry3D.flat();
+        console.log(arry2D);
+
+        const arry1D = arry3D.flat(2);
+        console.log(arry1D);
+
+        //要素の順番を逆に配置
+        const arry3 = [1,2,3,4,5]
+        arry3.reverse();
+        console.log(arry3);
+
+    </script>
+</body>
+</html>

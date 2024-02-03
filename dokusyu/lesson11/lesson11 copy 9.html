@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11</title>
+</head>
+<body>
+    <script>
+        //11.1  配列(Array)
+        //11.1.5    静的メソッド
+        //配列風オブジェクトや反復可能オブジェクトを配列に変換
+        const set = new Set();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        const convertedArray = Array.from(set);
+        console.log(convertedArray);
+
+        //配列かどうか判定
+        const set2 = new Set();
+        console.log(Array.isArray(set2));
+
+        const convertedArray2 = Array.from(set2);
+        console.log(Array.isArray(convertedArray));
+        
+
+    </script>
+</body>
+</html>
