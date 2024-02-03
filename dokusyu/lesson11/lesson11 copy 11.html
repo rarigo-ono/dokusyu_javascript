@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11</title>
+</head>
+<body>
+    <script>
+        //11.2  Set
+        //11.2.1    Setの初期化
+        const convertedSet = new Set([1,2,3]);
+        console.log(convertedSet);
+        //add   値の追加
+        const fruits = new Set();
+        fruits.add('apple');
+        fruits.add('orange');
+        fruits.add('orange');
+        console.log(fruits);
+
+        //delete    値の削除
+        const fruits2 = new Set(["apple", "orange"]);
+        fruits.delete("orange");
+        console.log(fruits);
+
+         //delete    値をすべて削除
+         const fruits3 = new Set(["apple", "orange"]);
+         fruits3.clear();
+         console.log(fruits3)
+
+         //has  値が存在するか確認
+         const fruits4 = new Set(["apple", "orange"]);
+         console.log(fruits4.has("orange"));
+         console.log(fruits4.has("banana"));
+
+
+
+    </script>
+</body>
+</html>
