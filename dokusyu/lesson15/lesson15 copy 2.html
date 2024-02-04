@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson15</title>
+</head>
+<body>
+    <div>
+        <button>アラート</button>
+    </div>
+    <script>
+        //15.1.2
+        //構文  イベントハンドラの解除
+        //EventTarget.on{イベントタイプ} = null;
+        const btn = document.querySelector("button");
+        btn.onclick = function(){
+            alert("アラート");
+        };
+        btn.onclick = null;
+    </script>
+</body>
+</html>
