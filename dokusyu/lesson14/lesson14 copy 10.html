@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson14</title>
+</head>
+<body>
+    <div>ボタンをクリックすると文字と背景の色が変わります。</div>
+    <button>ボタン</button>
+    <style>
+        .preparedClass {
+            color: red;
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+        const div = document.querySelector("div");
+        const button = document.querySelector("button");
+
+        button.onclick = function(){
+            div.classList.toggle("preparedClass");
+        };
+    </script>
+</body>
+</html>

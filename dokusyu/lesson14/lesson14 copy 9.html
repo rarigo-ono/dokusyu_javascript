@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson14</title>
+</head>
+<body>
+    <div>2秒後に文字と背景の色が変わります。</div>
+
+    <style>
+        .preparedClass {
+            color: red;
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+        setTimeout(() => {
+            const div = document.querySelector("div");
+            div.classList.add("preparedClass");
+        }, 3000);
+    </script>
+</body>
+</html>
