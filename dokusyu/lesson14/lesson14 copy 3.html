@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson14</title>
+</head>
+<body>
+    <div id="test"><span>Hello World</span></div>
+    <script>
+        const testE1 = document.querySelector("#test");
+
+        console.log(`innerHTML: ${testE1.innerHTML}`);
+        setTimeout(() => {
+            testE1.innerHTML = "<h1>Good World</h1>";
+        }, 2000);
+    </script>
+</body>
+</html>
