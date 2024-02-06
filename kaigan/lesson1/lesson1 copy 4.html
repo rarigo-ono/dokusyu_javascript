@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson1</title>
+</head>
+<body>
+    <script>
+        const Person = function(living, age, gender){
+            this.living = living;
+            this.age = age;
+            this.gender = gender;
+            this.getGender = function(){return this,gender};
+        };
+
+        var cody = new Person(true, 33, "male");
+
+        
+
+    </script>
+</body>
+</html>
