@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson3</title>
+</head>
+<body>
+    <h1>プリミティブ型</h1>
+    <h2>文字列(Stirng)</h2>
+    <p>'これは文字列です。';<br>"これも文字列です。";<br>`これも文字列です。`</p>
+
+    <h1>BigInt</h1>
+    <p></p>
+    
+
+
+    <script>
+        
+        //BigInt
+        console.log(2 ** 53 + 1);
+        console.log(2n ** 53n + 1n);
+
+        //boolean
+        let isHungry = true;
+        if(isHungry){
+            window.alert("お腹が減りました。")
+        }
+
+        let hello = "Hello";
+        let greeting = null;
+        console.log(greeting);
+
+        let name;
+        console.log(name);
+
+        let person = {
+            name: {first: "太郎", last:"独習"},
+            age: 18
+        };
+
+        window.alert(person.age);
+        window.alert(person.name.last);
+        person.name.last = "次郎";
+        person.gender = "男";
+        person.family = {wife: "花子", child: "三郎"};
+
+        console.log(person.family.wife);
+        console.log(person);
+
+    </script>
+</body>
+</html>
