@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson3</title>
+</head>
+<body>
+    <h1>オブジェクト</h1>
+    <h2>ブラケット記法</h2>
+    <p>オブジェクトの後ろに[]を続けて、その中の文字列でプロパティ名を記述</p>
+    <script>
+        let person = {
+            name: {first: "太郎", last:"独習"},
+            age: 18
+        };
+
+        console.log(person["name"]["first"]);
+        console.log(person["name"]["last"]);
+
+        person["name"]["last"] = "次郎";
+        console.log(person["name"]["last"]);
+
+        person["gender"] = "男";
+        person["family"] = {wife: "花子", child: "三郎"};
+        
+
+        let item = {
+            name: "リンゴ",
+            price: 200,
+            etc: "青森産"
+        };
+        console.log(item["age"]);
+        //console.log(item["name"]["first"]);
+        //console.log(item["name"]["last"]);
+        console.log(item["etc"]+"の"+item["name"]);
+
+    </script>
+</body>
+</html>
