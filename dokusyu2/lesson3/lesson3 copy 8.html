@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson3</title>
+</head>
+<body>
+    <script>
+        //ブラケット記法
+        let person = {
+            name: {first: "太郎", last:"独習"},
+            age: 18
+        };
+        
+        console.log(person["age"]);
+        console.log(person["name"]["last"]);
+
+        //値の変更
+        person["name"]["last"] = "次郎";
+        //プロパティとオブジェㇳの追加
+        person["gender"] = "男";
+        
+        //他のオブジェクトを追加
+        person["family"] = {wife: "花子", child: "三郎"};
+
+        //追加したオブジェクトを確認
+        console.log(person["family"]["wife"]);
+        console.log(person["gender"]);
+        console.log(person["family"]["child"]);
+        //オブジェクトの中身を確認
+        console.log(person);
+    </script>
+</body>
+</html>

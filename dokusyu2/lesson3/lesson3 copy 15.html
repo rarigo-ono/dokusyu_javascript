@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson3</title>
+</head>
+<body>
+    <script>
+        //3.6.6 シンボル
+        //let 変数名 = Symbol(["ラベル"])
+        console.log(Symbol());
+        console.log(Symbol("ラベルは目印"));
+
+        //シンボルを使ってプロパティを設定
+        let mySymbl1 = Symbol();
+        let mySymbl2 = Symbol();
+
+        const obj = {
+            [mySymbl1]: "値1",
+            [mySymbl2](){window.alert("Hello");}
+        };
+        console.log(obj[mySymbl1]);
+        obj[mySymbl2]();
+    </script>
+</body>
+</html>
