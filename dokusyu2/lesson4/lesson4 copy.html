@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson4</title>
+</head>
+<body>
+    <script>
+        //4.4   等価演算子
+        //4.4.1 厳格な等価性
+        console.log(1 === 1);
+        console.log(1 === "1");
+        console.log(1 === true);
+        //4.4.2 抽象的な等価性
+        console.log(1 == 1);
+        console.log(1 == "1");
+        console.log(1 == true);
+        console.log(null == undefined);
+
+        //4.4.3 オブジェクトの比較
+        const a = { };
+        const b = { };
+        console.log(a === b);
+        /*
+        プリミティブ値の場合は取得した値を比較するが、
+        オブジェクトの場合はオブジェクトが格納しているアドレスを比較する。
+        */
+        //4.5   関係演算子
+        console.log(10 < 2 * 6 - 2);
+        console.log(3 > 8 % 3);
+        console.log((9 > 3) * 3);
+    </script>
+</body>
+</html>
