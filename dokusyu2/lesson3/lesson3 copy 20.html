@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson3</title>
+</head>
+<body>
+    <script>
+        const TAX_RATE = 1.1;
+        let productPrice = 1000;
+        console.log(`商品の金額は${productPrice}ですので、税込金額は${productPrice * TAX_RATE}円です。`)
+
+        console.log(12 ** 2 % 5);
+        console.log(12n ** 2n % 5n);
+        let test = null
+        console.log(test);
+
+        const counter = {num: 1};
+        counter.num = counter.num + 1;
+        window.alert(counter.num);
+
+        counter["num"] = counter["num"] + 1;
+        window.alert(counter["num"]);
+
+        console.log(typeof null);
+        console.log(100 + true);
+        console.log(1 + Number("hello"));
+        console.log(1 + Boolean("hello"));
+
+    </script>
+</body>
+</html>
