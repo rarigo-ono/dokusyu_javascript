@@ -7,7 +7,27 @@
 </head>
 <body>
     <script>
-        
+        const truthy = "truthyな値です。";
+
+        if(truthy){
+            console.log("条件式に渡された値はtruthyです。");
+        } else {
+            console.log("条件式に渡された値はfalsyです。");
+        };
+
+        const falsyVal = 0;
+
+        if(falsyVal !== null && falsyVal !== undefined){
+            console.log("null、undefined以外の値です。");
+        } else {
+            console.log("null、またはundefinedです。");
+
+        };
+
+        let val = "";
+        if(val === true){
+            
+        }
     </script>
 </body>
 </html>

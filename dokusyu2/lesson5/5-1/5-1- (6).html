@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson4</title>
+    <title>Lesson5</title>
 </head>
 <body>
     <script>
-        
+        const val = 0;
+        switch(val){
+            case "0": console.log("case文が実行されました。");
+            default : console.log("default文が実行されました。")
+        }
+
+        const whichCase = "case1";
+
+        switch(whichCase){
+            case "case1":
+                console.log("case1節が実行されました。");
+                //break;
+            case "case2":
+                console.log("case2節が実行されました。");
+                //break;
+            default:
+                console.log("Default節が実行されました。")
+        }
+
+        let animal = "サル";
+
+        switch(animal){
+            case "ゾウ":
+                console.log("ゾウ");
+            case "ウマ":
+                console.log("ウマ");
+            case "ウサギ":
+                console.log("ウサギ");
+                break;
+            default:
+                console.log("何かわかりません。");
+        }
     </script>
 </body>
 </html>
