@@ -7,7 +7,30 @@
 </head>
 <body>
     <script>
-        
+        const fruits = {apple:"りんご", banana:"バナナ", orange:"オレンジ"};
+        for(const key in fruits){
+            console.log(`キー[${key}] 値:[${fruits[key]}]`);
+        };
+
+        const obj = {
+            prop1: 10,
+            prop2: 20,
+            skip: 20,
+            prop3: 23,
+            prop4: 47,
+        };
+
+        let value = 0;
+
+        for (const key in obj){
+            if(key === "skip"){
+                continue;
+            } else {
+                value += obj[key];
+            };
+        };
+
+        console.log(value);
     </script>
 </body>
 </html>
