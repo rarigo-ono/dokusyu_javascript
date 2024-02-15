@@ -7,7 +7,31 @@
 </head>
 <body>
     <script>
+        let i = 0;
+        while(i<8){
+            i++;
+            if(i % 2){
+                continue;
+            }
+
+            console.log(i);
+        }
+
+        //値の変数を設定（０に設定）
+        //let val = 0
+        //for文で4回繰り返す
+        for(let i = 1; i <= 4; i++){
+            //値が3ならコンティニューする
+            if(i === 3){
+                continue;
+            }
+            //値と文章をコンソールに表示
+            console.log(i + "回目のループです。");
+        };
         
+        
+
+
     </script>
 </body>
 </html>
