@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson4</title>
+    <title>Lesson6</title>
 </head>
 <body>
     <script>
-        
+        function plus(a, b = 5){
+            return a + b;
+        };
+        console.log(plus(1));//デフォルト引数と計算
+        console.log(plus(1, 10));//a=1 b=10で計算
+
+        function hello(greeting = "こんにちは", person = "独習太郎"){
+            console.log(greeting + person);
+        };
+        hello(undefined, undefined);
+        hello(null, null);
+        hello();
+
+        function calcAreaOfCircle(radius, pi = 3){
+            return radius * radius * pi;
+        };
+
+        console.log(calcAreaOfCircle(5));
+        console.log(calcAreaOfCircle(5, 3.14));
     </script>
 </body>
 </html>

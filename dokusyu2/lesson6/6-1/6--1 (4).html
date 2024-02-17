@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson4</title>
+    <title>Lesson6</title>
 </head>
 <body>
     <script>
+        //関数宣言の場合
+        function chofuku(){
+            console.log("こんにちは");
+        };
+
+        function chofuku(){
+            console.log("さようなら");
+        };
+
+        chofuku();
+        //上書きされる
+
+        //関数式の場合
+        const chofuku2 = function(){
+            console.log("こんにちは");
+        };
+
+        console.log(chofuku2());
+
+        /*
+        const chofuku = function(){
+            console.log("さようなら");
+        };
+        */
+
+        hello();
+
+        function hello(){
+            console.log("こんにちは");
+        };
         
+        const help = function(){
+            console.log("助けてください！");
+        };
+
+        help();
     </script>
 </body>
 </html>
