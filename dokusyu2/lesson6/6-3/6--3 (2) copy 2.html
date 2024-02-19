@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson6</title>
+</head>
+<body>
+    <script>
+        //受け取る側の関数を定義
+        const hangout = (plan) => {
+            console.log("誘う");
+            console.log("日付を決める");
+            plan();
+            console.log("写真を共有");
+        }
+
+        //渡す関数を定義
+        const shopping = () => console.log("ショッピングをする");
+        const eatLunch = () => console.log("ランチを食べる");
+
+        //コールバック関数を渡して実行
+        hangout(shopping);
+        hangout(eatLunch);
+        hangout(() => console.log("映画を見る"))
+    </script>
+</body>
+</html>

@@ -8,14 +8,16 @@
 <body>
     <script>
         function fn(){};
-        fn.fullName = "独習太郎";
+        fn.fullName = "独習太郎"; //オブジェクトのようにプロパティの追加が可能
 
         fn.hello = function(){
-            console.log("こんにちは、独習太郎");
+            console.log("こんにちは、独習太郎");//メソッドも追加可能
         };
 
+        //プロパティの取得
         console.log(fn.fullName);
 
+        //メソッド実行
         fn.hello();
 
         function hello(name){
@@ -23,8 +25,8 @@
         };
 
         const obj = hello;
+        obj("大谷翔平")
 
-        obj("独習太郎");
     </script>
 </body>
 </html>
