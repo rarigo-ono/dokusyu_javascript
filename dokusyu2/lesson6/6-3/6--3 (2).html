@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson4</title>
+    <title>Lesson6</title>
 </head>
 <body>
     <script>
-        
+        function saySomething(callback){
+            const result = callback();
+            console.log(`${result}、独習太郎！`);
+        };
+
+        function hello(){
+            return "こんにちは";
+        };
+
+        function bye(){
+            return "さようなら";
+        };
+
+
+        saySomething(hello);
+
+        saySomething(bye);
     </script>
 </body>
 </html>
