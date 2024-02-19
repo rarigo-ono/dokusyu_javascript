@@ -7,6 +7,21 @@
 </head>
 <body>
     <script>
+        function fn(arg1 = "初期値1", arg2 = "初期値2"){
+            console.log(arg1, arg2);
+        };
+
+        fn(undefined, "引数2");
+
+        function fn2(obj){
+            obj.arg1 ??= "初期値1";
+            obj.arg2 ??= "初期値2";
+            console.log(obj.arg1, obj.arg2);
+        };
+
+        const params = {arg2: "引数2"};
+
+        fn2(params);
         
     </script>
 </body>
