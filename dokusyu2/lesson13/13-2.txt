@@ -1,0 +1,13 @@
+13.2    Promise
+Promiseは、非同期処理を扱うためのオブジェクト
+Promiseの記法
+    let prom = new Promise      (非同期処理を扱う関数)
+    let thenProm = prom.then    (非同期処理の成功時に実行する関数)
+    let catchProm = thenProm.catch  (非同期処理の失敗時に実行する関数)
+    let finallyProm = catchProm.finally (非同期処理完了後に必ず実行する関数)
+
+    13.2.2  Promiseチェーン
+        複数のPromiseを直列で実行する方法
+        直列とは、前の非同期処理の完了を待って、次の非同期処理を実行すること
+        上記をPromiseチェーンと呼びます。
+        

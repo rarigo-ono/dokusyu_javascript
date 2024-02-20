@@ -7,7 +7,17 @@
 </head>
 <body>
     <script>
-        //無名関数とアロー関数の違い
+        //練習問題6.11
+        //1
+        const hello = () => console.log("こんにちは");
+        hello();
+
+        //2
+        const double = num => {return num * 2;};
+        console.log(double(10));
+
+        //3
+        setTimeout( name => console.log("こんにちは" + name), 3000, "独習太郎");
     </script>
 </body>
 </html>

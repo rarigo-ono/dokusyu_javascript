@@ -7,11 +7,15 @@
 </head>
 <body>
     <script>
-        setTimeout(function(){
-            console.log("こんにちは");
-        });
+        //無名関数
+        setTimeout( function() {
+            console.log(("hello"));
+        }, 2000);
 
-        setTimeout(() => console.log("こんばんは"), 1000);
+        //アロー関数
+        setTimeout( () => {
+            console.log("hello in Arrow");
+        },1000);
     </script>
 </body>
 </html>
