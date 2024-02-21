@@ -10,4 +10,14 @@ Promiseの記法
         複数のPromiseを直列で実行する方法
         直列とは、前の非同期処理の完了を待って、次の非同期処理を実行すること
         上記をPromiseチェーンと呼びます。
-        
+    
+    13.2.3  Promiseの状態管理
+        内部で現在のの状態を管理し、これによってPromiseのメソッド(catchやthen)などの呼び出しを制御している。
+        pending     resolve、rejectが呼び出される前の状態
+        fulfilled   resolveが呼び出された状態
+        rejected    rejectが呼び出された状態
+    13.2.4  並列処理
+        Promise.all すべての非同期処理を並列に実行し、すべての完了を待ってから次の処理を行いたい場合に使用する。
+
+    
+    13.3.1 async
