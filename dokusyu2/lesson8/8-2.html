@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson8</title>
+</head>
+<body>
+    <script>
+        //関数コンテキストのthisの種類
+        //オブジェクトのメソッドとして実行
+        /*
+        const taro =  {
+            name: "太郎",
+            hello: function() {
+                console.log("こんにちは" + this.name);
+            }
+        };
+
+        taro.hello();
+        */
+
+        //関数として実行
+        /*
+        window.name = "花子";
+
+        function hello() {
+            console.log("こんにちは" + this.name );
+        };
+
+        hello();
+        */
+
+        //アロー関数内でthis使用時の挙動
+        /*
+        const azuki = {
+            name: "あずきちゃん",
+            hello: function() {
+                const malon = {
+                    name: "マロンちゃん",
+                    hello: () => {
+                        console.log("こんにちは、" + this.name);
+                    }
+                };
+
+                malon.hello();
+            }
+        };
+
+        azuki.hello();
+
+        //8.2 test
+        window.name = "花子";
+        const which = () => {
+            console.log( this.name );
+        }
+
+        const hanako = {
+            name: "独習　花子",
+            callName() {
+                which();
+            }
+        };
+
+        hanako.callName();
+        */
+
+        window.name = "花子";
+
+        const taro = {
+            name: "太郎",
+            hello: function() {
+                console.log("こんにちは、" + this.name);
+            }
+        };
+
+        function greeting( callback ){
+            callback();
+        };
+
+        greeting(taro.hello);
+    </script>
+</body>
+</html>
