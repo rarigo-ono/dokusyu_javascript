@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7</title>
+</head>
+<body>
+    <script>
+        window.whichVal = "グローバルスコープ";
+        let whichVal = "スクリプトスコープ";
+
+        function outerScope(){
+            let whichVal = "outerScope関数スコープ";
+
+            function innerScope(){
+                let whichVal = "innerScope関数スコープ";
+                console.log(whichVal);
+            };
+            innerScope();
+        }
+
+        outerScope();
+    </script>
+
+</body>
+</html>
